@@ -7,12 +7,12 @@ const { apiLimiter } = require("./middlewares/rateLimiter");
 
 const app = express();
 
+app.use(express.json());
 app.use(
     cors({
     origin: "*"
     })
 );
-app.use(express.json());
 app.use("/api/v1/applicants", applicantRoutes);
 app.use("/api/v1/admin", adminRoutes);
 app.use("/api", apiLimiter);

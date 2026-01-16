@@ -7,8 +7,6 @@ const { protect } = require("../middlewares/authMiddleware");
 const { validate } = require("../middlewares/validateRequest");
 const { applicantSchema } = require("../validators/applicantValidator");
 const { updateStatus } = require("../controllers/applicantController");
-const { protect } = require("../middlewares/authMiddleware");
-const { validate } = require("../middlewares/validateRequest");
 const { statusSchema } = require("../validators/statusValidator");
 const { applyLimiter } = require("../middlewares/rateLimiter");
 
