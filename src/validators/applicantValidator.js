@@ -13,7 +13,10 @@ exports.applicantSchema = Joi.object({
 
     year: Joi.string().optional(),
 
-    roleApplied: Joi.string().max(50).required(),
+    role: Joi.string().max(50).optional(),
+    roleApplied: Joi.string().max(50).optional(),
 
     answers: Joi.array().items(Joi.string().max(500)).optional()
+}).or('role', 'roleApplied').messages({
+    'object.missing': 'Either role or roleApplied is required'
 });

@@ -6,7 +6,7 @@ const { adminLoginSchema } = require("../validators/adminValidator");
 
 const router = express.Router();
 
-router.post("/login", loginAdmin);
+
 router.post(
     "/login",
     validate(adminLoginSchema),
